@@ -4,7 +4,8 @@
 ---
 
 <h1 id="物联网导论">物联网导论</h1>
-<p>[TOC]</p>
+<!-- MarkdownTOC autolink=&#34;true&#34; style=&#34;ordered&#34;  autoanchor=&#34;true&#34; -->  
+<!-- /MarkdownTOC -->
 <h1 id="第一章-概论">第一章 概论</h1>
 <p><img src="https://m.qpic.cn/psc?/V10Fll0B0p55hf/GS0SfvynPBvuza9narKsjLsi93B9kAYfuH2uBk*C0GFBTu7aoeofCpmfR8gfNAq9rLUDEYogcdplAd2n0117Og!!/b&amp;bo=9QIgAwAAAAARB.Q!&amp;rf=viewer_4" alt="enter image description here"></p>
 <h2 id="物联网定义与主要技术特征">1.1 物联网定义与主要技术特征</h2>
@@ -250,9 +251,24 @@ IP：实现<strong>节点</strong>的地址标志与路由选择功能<br>
 业务：云计算提供成熟商业模式</li>
 </ul>
 <h2 id="移动通信网技术的研究与发展">5.2 移动通信网技术的研究与发展</h2>
-<p><strong>通信技术</strong>概念：p190</p>
-<h3 id="无线通信技术的发展-p191">无线通信技术的发展 p191</h3>
-<h3 id="移动通信系统的结构与基本工作原理p200">移动通信系统的结构与基本工作原理p200</h3>
+<p><strong>通信技术</strong>概念：电磁波传播有两种方式，一种是在自由空间传播，即无线方式；一种是在有限制空间传播，即优先方式。不同传输介质传输不同频率的信号。</p>
+<h3 id="无线通信技术的发展">无线通信技术的发展</h3>
+<ul>
+<li><strong>无线通信系统</strong>：按传输路径分为地波与天波。<br>
+缺点：易受天气影响，信号变化幅度大，容易被干扰<br>
+优点：技术成熟，应用广泛，能以小功率向远处发送</li>
+<li><strong>微波通信系统</strong>：视距无阻挡传播，小发射功率，大通信带宽，受气候影响大</li>
+<li><strong>蜂窝通信系统</strong></li>
+<li><strong>卫星通信系统</strong> 作为中继器或者广播。是现代主要通信手段之一</li>
+</ul>
+<h3 id="移动通信系统的结构与基本工作原理">移动通信系统的结构与基本工作原理</h3>
+<h4 id="基本结构">基本结构</h4>
+<p>移动终端 接入网 核心网<br>
+移动终端与基站通过<strong>空中接口</strong>通信；基站与移动交换机通过<strong>光纤</strong>连接</p>
+<h4 id="工作原理">工作原理</h4>
+<p><em>以不在归属地拨打电话为例</em>：<br>
+用户的信息存在归属地的<strong>位置归属寄存器HLR</strong>中，其他地方的<strong>访问位置寄存器VLR</strong>在用户到来期间请求信息，等用户离开后删除。手机发请求，附近<strong>基站</strong>的天线收到移动终端的请求后向<strong>移动交换机MSC</strong>发请求在归属位置寄存器中查找被呼叫方的位置信息，由被叫手机附近基站接收命令，向被叫手机发出振铃信号</p>
+<p>手机入网会被赋予一个鉴权键Ki，手机开机、接打电话、变更位置、变更业务时都要访问<strong>鉴权中心服务器</strong>进行鉴权</p>
 <h3 id="g与物联网">5G与物联网</h3>
 <p><strong>5G性能指标</strong>：用户体验速率，流量密度，连接数密度，端-端延时，移动性，用户峰值速率<br>
 <strong>5G与物联网</strong>：5G设计者将物联网纳入整个技术体系中</p>
@@ -280,22 +296,68 @@ IP：实现<strong>节点</strong>的地址标志与路由选择功能<br>
 <p>位置服务的基本概念：基于位置的服务LBS<br>
 <img src="http://m.qpic.cn/psc?/V10Fll0B0p55hf/gWShryPLAbNNMut8n7qrsB8j7VS2G*73hthf1*QzqZAKZjHuAY.NSkRRbTansL4KuC46Ni6HUZRCTvWtLfLbRV5j4KZqpQ.DNGypItDCE3E!/b&amp;bo=kwUHBAAAAAARF7U!&amp;rf=viewer_4&amp;t=5" alt="enter image description here"></p>
 <h2 id="定位系统">6.2定位系统</h2>
-<h3 id="gps系统的组成p221">GPS系统的组成p221</h3>
+<h3 id="gps系统">GPS系统</h3>
+<p><strong>全球定位系统（Global Positioning System）<strong>是将卫星定位和导航技术与现代通信技术相结合的全新定位方法，通过同时测定三维坐标的方法将测绘定位技术扩展到整个地球空间与外层空间，从静态到动态，从单点到局域、广域范围，从事后处理扩展到实时、定位、导航，精度逐渐提高到</strong>厘米</strong>级。</p>
+<h4 id="gps系统的组成">GPS系统的组成</h4>
 <ul>
 <li><strong>空间星座部分</strong>：24颗卫星分布在6个轨道上，每一个轨道上不均匀地分布着4颗卫星，轨道高度为20200千米</li>
-<li><strong>地面监控部分</strong>：由分布在全球的<strong>主控站</strong>、6个<strong>监控站</strong>与4个<strong>注入站</strong>组成  监控站的主要任务是对卫星进行连续观测和数据采集，并将检测数据传送到主控站</li>
-<li><strong>用户设备部分</strong></li>
+<li><strong>地面监控部分</strong>：<br>
+任务是<strong>控制卫星运行</strong>与保证卫星<strong>时间统一</strong><br>
+由分布在全球的<strong>主控站</strong>、6个<strong>监控站</strong>与4个<strong>注入站</strong>组成  监控站的主要任务是对卫星进行连续观测和数据采集，并将检测数据传送到主控站</li>
+<li><strong>用户设备部分</strong> 即GPS接收机<br>
+通过判断各个卫星信号的发送接收时间差计算与观测点卫星的距离从而计算位置 <strong>接收越多越准确</strong></li>
 </ul>
-<h3 id="gis地理信息系统p224">GIS地理信息系统p224</h3>
+<h4 id="接收机类型">接收机类型</h4>
+<ul>
+<li>导航型 ： 实时给出位置速度。精度在±10cm</li>
+<li>测地型 ： 用于大地精密测量。成本较高。</li>
+<li>授时型 ： 高精度时间授时，用于天文台与无线电通信的时间同步。</li>
+</ul>
+<h4 id="发展趋势">发展趋势</h4>
+<p>高精度与可靠性 安全性 服务综合性 多系统兼容性<br>
+我国北斗：</p>
+<ul>
+<li>单一GPS到多星座并存</li>
+<li>多服务融合</li>
+<li>专业转向大众</li>
+<li>室外专用到内外无缝</li>
+</ul>
+<h3 id="gis地理信息系统">GIS地理信息系统</h3>
+<p><strong>地理信息系统是一门交叉学科</strong>：包括地理学、遥感测绘学、全球定位系统、管理科学与计算机科学。以空间数据库为基础，在计算机支持下，科学管理和综合分析具有空间内涵的地理数据，为管理和决策提供科学依据。<br>
+<strong>LBS服务的核心是位置与地理信息缺一不可</strong><br>
+<strong>GIS技术</strong>数据结构 工具软件 地理空间数据库<br>
+<strong>GIS应用方法</strong>应用系统设计 数据采集分析 地学专家系统</p>
+<h4 id="地理空间数据库的特点">地理空间数据库的特点</h4>
+<ul>
+<li>数据来源多样</li>
+<li>数据选取面向应用与行业</li>
+<li>数据是动态的</li>
+<li>数据是海量的<br>
+<a href="#%E7%89%A9%E8%81%94%E7%BD%91%E6%95%B0%E6%8D%AE%E7%9A%84%E7%89%B9%E7%82%B9">物联网数据的特点 </a></li>
+</ul>
+<h4 id="发展过程">发展过程</h4>
+<p>2d-&gt;3d-&gt;vr<br>
+网络、移动GIS软件</p>
+<h4 id="应用领域">应用领域</h4>
+<p>资源管理、资源配置、城市规划、生态环境管理、突发事件应急…</p>
 <h2 id="定位技术">6.3 定位技术</h2>
-<h3 id="移动通信定位技术p230">移动通信定位技术p230</h3>
+<h3 id="移动通信定位技术">移动通信定位技术</h3>
+<p><strong>基站定位</strong></p>
+<p><strong>A-GPS技术</strong><br>
+先上传位置信息到基站，基站发送卫星仰角等实用信息使得寻找GPS卫星的时间缩小到5-10秒。</p>
 <h3 id="常用的室内定位技术">常用的室内定位技术</h3>
-<p>（要记得写）</p>
+<ul>
+<li>基于无线局域网的定位技术</li>
+<li>基于RFID的定位技术</li>
+<li>无线传感器网络定位技术<br>
+（要记得写）</li>
+</ul>
 <h2 id="本章小结-3">6.4本章小结</h2>
 <h1 id="第七章-物联网智能数据处理技术">第七章 物联网智能数据处理技术</h1>
 <h2 id="物联网数据处理技术的基本概念">7.1 物联网数据处理技术的基本概念</h2>
 <h3 id="物联网数据的特点">物联网数据的特点</h3>
-<p><strong>海量 多态 动态 关联</strong></p>
+<p>海量 多态 动态 关联<br>
+<a href="#%E5%9C%B0%E7%90%86%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%89%B9%E7%82%B9"> 地理空间数据库的特点</a></p>
 <h3 id="物联网中的数据、信息与知识">物联网中的数据、信息与知识</h3>
 <h3 id="物联网数据处理关键技术">物联网数据处理关键技术</h3>
 <ul>
@@ -305,14 +367,22 @@ IP：实现<strong>节点</strong>的地址标志与路由选择功能<br>
 <li>智能决策</li>
 </ul>
 <h3 id="海量数据存储技术">海量数据存储技术</h3>
-<p><strong>数据库技术</strong>p244</p>
-<h2 id="云计算p254">7.3 云计算p254</h2>
+<h4 id="数据库基本概念">数据库基本概念</h4>
+<p><strong>组成</strong>：数据库 数据库系统 数据库系统管理员  应用程序 用户<br>
+<strong>类型</strong>： 层次  网状（IDS） 关系（SQL server）</p>
+<h2 id="云计算">7.3 云计算</h2>
 <p><strong>云计算</strong>基本概念：利用互联网实现随时随地、按需便捷地访问共享计算设施、存储设备、应用程序等资源的计算模式。</p>
 <h3 id="分类-1">分类</h3>
 <ul>
 <li><strong>IaaS</strong>:基础设施及服务</li>
 <li><strong>PaaS</strong>:平台及服务</li>
 <li><strong>SaaS</strong>:软件及服务</li>
+</ul>
+<h3 id="虚拟化技术的特征">虚拟化技术的特征</h3>
+<ul>
+<li>资源分享</li>
+<li>资源定制</li>
+<li>细粒度资源管理</li>
 </ul>
 <h3 id="主要技术特征">主要技术特征</h3>
 <ul>
@@ -323,10 +393,18 @@ IP：实现<strong>节点</strong>的地址标志与路由选择功能<br>
 <li><strong>高可靠性</strong></li>
 <li><strong>快速部署</strong></li>
 </ul>
+<h3 id="云计算资源中心">云计算资源中心</h3>
+<p><strong>特点</strong></p>
+<ul>
+<li>自治：从错误中自动重新配置之</li>
+<li>规模经济</li>
+<li>可扩展<br>
+<strong>研究方向：</strong> 优化拓扑 高带宽高可靠低成本连接资源；节能</li>
+</ul>
 <h2 id="物联网与大数据">7.4 物联网与大数据</h2>
 <h3 id="物联网中的智能决策">物联网中的智能决策</h3>
-<p><strong>数据挖掘</strong>基本概念：p265<br>
-透过海量数据寻找物理世界的变化规律和发展趋势，以便更加智慧地处理物理世界的问题，避免制造信息垃圾。</p>
+<p><strong>数据挖掘</strong>基本概念：<br>
+透过海量数据寻找物理世界的变化规律和发展趋势，以便更加智慧地处理物理世界的问题，<strong>避免制造信息垃圾</strong></p>
 <h3 id="物联网大数据研究的特殊性">物联网大数据研究的特殊性</h3>
 <p><strong>个性一面</strong></p>
 <ul>
@@ -338,19 +416,23 @@ IP：实现<strong>节点</strong>的地址标志与路由选择功能<br>
 <p><img src="http://m.qpic.cn/psc?/V10Fll0B0p55hf/gWShryPLAbNNMut8n7qrsOv*4ncHot99ap1vz2p1p6QRqD4tK2glidHGuprtRJPdi7cDavYOOXjuqfOa6Ms5R4QS.E.*2VSa4tnGphMVXP8!/b&amp;bo=jwYzBAAAAAARJ64!&amp;rf=viewer_4&amp;t=5" alt="enter image description here"></p>
 <h1 id="第八章-物联网网络安全">第八章 物联网网络安全</h1>
 <h2 id="网络空间安全与网络安全的基本概念">8.1 网络空间安全与网络安全的基本概念</h2>
-<h3 id="物联网信息安全技术研究的内容-p278">物联网信息安全技术研究的内容 p278</h3>
+<h3 id="物联网信息安全技术研究的内容">物联网信息安全技术研究的内容</h3>
+<p>保证物联网环境中数据传输、存储、处理与访问的安全性</p>
 <ul>
-<li>物联网安全体系结构</li>
-<li>网络安全防护技术</li>
-<li>密码学与其在物联网中的作用</li>
-<li>物联网的网络安全协议 ：IPSec SSL SET</li>
+<li>物联网安全体系结构：网络安全威胁分析 网络安全模型 确定网络安全体系 指定评价标准</li>
+<li>网络安全防护技术：防火墙 入侵检测 安全审计 网络攻击取证 业务持续性规划</li>
+<li>密码学与其在物联网中的作用：对称密码体系 公钥密码</li>
+<li>物联网的网络安全协议 ：网络层ip安全协议（IPSec） 传输层安全套接协议（ SSL） 应用层的安全电子交易 （SET）协议</li>
 </ul>
-<h3 id="网络攻防在物联网中p279">网络攻防在物联网中p279</h3>
-<p><strong>概念</strong></p>
-<hr>
-<p><strong>措施</strong>**</p>
+<h3 id="网络攻防在物联网中">网络攻防在物联网中</h3>
+<p><strong>概念</strong> 攻击仅仅发生在入侵行为完成，且入侵者在目标网络内<br>
+<strong>分类</strong></p>
 <ul>
+<li><strong>非服务</strong>：针对网络层及其底层通信设备</li>
+<li><strong>服务</strong>：<br>
+<strong>措施</strong>**</li>
 <li>欺骗</li>
+<li>拒绝服务类</li>
 <li>信息收集类</li>
 <li>漏洞类</li>
 </ul>
